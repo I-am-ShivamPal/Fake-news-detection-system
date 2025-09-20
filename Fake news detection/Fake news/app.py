@@ -14,7 +14,7 @@ from sklearn.metrics import accuracy_score
 nltk.download('stopwords')
 
 # Load data
-news_df = pd.read_csv('train.csv')
+news_df = pd.read_csv('https://drive.google.com/uc?id=1ip8TLiWnvbcbhsUMeVS3NnQPMGrqolJD')
 news_df = news_df.fillna(' ')
 news_df['content'] = news_df['author'] + ' ' + news_df['title']
 
@@ -66,4 +66,5 @@ if input_text:
         st.error('🚨 The News is Fake!')
     else:
         st.success('✅ The News is Real!')
+
 
